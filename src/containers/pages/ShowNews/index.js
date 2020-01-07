@@ -34,7 +34,7 @@ class ShowNews extends Component {
                             <div className="panel-body">
                                 <h1 className="text-center">SHOW DATA</h1>
                                 <hr />
-                                <form onSubmit={this.handlerSummit}>
+                                <form>
                                     <div className="form-group">
                                         <label>Judul Berita</label>
                                         <p>{this.state.judul}</p>
@@ -52,7 +52,6 @@ class ShowNews extends Component {
                                         <br/>
                                         <img src={"http://localhost/api_pariwisata/img/"+this.state.foto} />
                                     </div>
-                                    <input type="submit" value="LOGIN" className="btn btn-info" />
                                 </form>
                             </div>
                         </div>
