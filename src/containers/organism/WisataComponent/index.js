@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const WisataComponent = (props) => {
     const DWisata = props.data.map(data => (
@@ -9,7 +10,7 @@ const WisataComponent = (props) => {
                 <td>{data.map_wisata}</td>
                 <td></td>
                 <td>
-                    <a className="btn btn-info">SHOW</a>
+                    <Link className="btn btn-info" to={"/showWis/"+data.id_wisata} >SHOW</Link>
                     <a className="btn btn-warning">DELETE</a>
                 </td>
             </tr>

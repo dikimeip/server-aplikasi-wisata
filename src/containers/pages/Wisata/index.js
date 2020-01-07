@@ -5,18 +5,18 @@ import WisataComponent from '../../organism/WisataComponent'
 import { Link } from 'react-router-dom'
 
 class Wisata extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
-            wisata : []
+            wisata: []
         }
     }
 
     componentDidMount = () => {
         Axios.get('http://localhost/api_pariwisata/wisata.php').then(res => {
-           // console.log(res.data.data)
+            // console.log(res.data.data)
             this.setState({
-                wisata:res.data.data
+                wisata: res.data.data
             })
         }).catch(err => {
             console.log(err)
@@ -27,8 +27,11 @@ class Wisata extends Component {
         return (
             <div>
                 <Navbar />
-                <Link to="/tambahwisata" className="btn btn-info">TAMBAH WISATA</Link>
-                <WisataComponent data ={this.state.wisata} />
+                <div className="container">
+                    <Link to="/tambahwisata" className="btn btn-info">TAMBAH WISATA</Link>
+                    <br/>
+                    <WisataComponent data={this.state.wisata} />
+                </div>
             </div>
 
         )

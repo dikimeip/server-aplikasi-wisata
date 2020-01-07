@@ -5,6 +5,7 @@ import Login from './containers/pages/Login';
 import Home from './containers/pages/Home';
 import Wisata from './containers/pages/Wisata';
 import TambahWisata from './containers/pages/TambahWisata';
+import ShowWisata from './containers/pages/ShowWisata';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/home" component={Home}/>
         <Route path="/wisata" component={Wisata}/>
         <Route path="/tambahwisata" component={TambahWisata}/>
+        <Route path="/showWis/:id" component={ShowWisata}/>
 
     </BrowserRouter>
   );
