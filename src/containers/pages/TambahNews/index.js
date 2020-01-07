@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from '../../organism/Navbar';
+import Axios from 'axios';
 
 class TambahNews extends Component {
     constructor(props){
@@ -8,9 +9,45 @@ class TambahNews extends Component {
             judul:"",
             author:"",
             isi:"",
-            foto:""
+            foto:"",
+            file : {
+                fto : ""
+            }
         }
     }
+
+    inputChange = (e) => {
+        this.setState({
+            [e.target.name]:e.target.value
+        })
+    }
+
+    imageChange = (e) => {
+        this.setState({
+            foto: e.target.files[0].name,
+            file: {
+                fto: e.target.files[0]
+            }
+        })
+    }
+
+    handlerSummit = (e) => {
+        e.preventDefault()
+        const formdata = new FormData
+        formdata.append('foto',this.state.file.fto,this.state.foto)
+        Axios.post('http://localhost/api_pariwisata/file_pariwisata.php',formdata)
+        Axios.post("http://localhost/api_pariwisata/tambah_berita.php",this.state).then(res => {
+            //console.log(res)
+            if (res.data.id === 1) {
+                this.props.history.push('/news')
+            } else {
+                console.log('error')
+            }
+        }).catch(err => {
+            console.log(err)
+        })
+    }
+
     render() {
         return (
             <div>
