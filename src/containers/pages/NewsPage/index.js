@@ -27,6 +27,7 @@ class NewsPage extends Component {
             <div>
                 <Navbar />
                 <div className="container">
+                    <Link className="btn btn-info" to="/tambahberita" >TAMBAH NEWS</Link>
                     <BeritaComponent data = {this.state.berita} />
                 </div>
             </div>
