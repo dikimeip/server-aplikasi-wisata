@@ -12,7 +12,7 @@ const Navbar = () => {
                         <li><Link to="/news" >BERITA</Link></li>
                         <li><Link to="/review" >REVIEW</Link></li>
                         <li><Link to="" >KONTAK</Link></li>
-                        <li><Link to="" >PENGADUAN</Link></li>
+                        <li><Link to="/pengaduan" >PENGADUAN</Link></li>
                         <li><Link to="" >KOMENTAR</Link></li>
                         <li><Link to="" >LOGOUT</Link></li>
                     </ul>

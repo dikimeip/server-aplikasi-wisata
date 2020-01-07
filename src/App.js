@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Router } from 'react-router-dom';
 import Login from './containers/pages/Login';
 import Home from './containers/pages/Home';
 import Wisata from './containers/pages/Wisata';
@@ -10,6 +10,7 @@ import NewsPage from './containers/pages/NewsPage';
 import TambahNews from './containers/pages/TambahNews';
 import ShowNews from './containers/pages/ShowNews';
 import ReviewPage from './containers/pages/ReviewPage';
+import PengaduanPage from './containers/pages/PengaduanPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/tambahberita" component = {TambahNews}/>
         <Route path="/shownews/:id" component = {ShowNews}/>
         <Route path="/review" component={ReviewPage}/>
+        <Route path="/pengaduan" component={PengaduanPage}/>
 
     </BrowserRouter>
   );
