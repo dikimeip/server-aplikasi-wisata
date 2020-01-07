@@ -10,7 +10,7 @@ const Navbar = () => {
                     <ul className="nav navbar-nav navbar-right">
                         <li><Link to="/wisata" >WISATA</Link></li>
                         <li><Link to="/news" >BERITA</Link></li>
-                        <li><Link to="" >REVIEW</Link></li>
+                        <li><Link to="/review" >REVIEW</Link></li>
                         <li><Link to="" >KONTAK</Link></li>
                         <li><Link to="" >PENGADUAN</Link></li>
                         <li><Link to="" >KOMENTAR</Link></li>

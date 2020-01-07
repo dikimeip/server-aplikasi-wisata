@@ -9,6 +9,7 @@ import ShowWisata from './containers/pages/ShowWisata';
 import NewsPage from './containers/pages/NewsPage';
 import TambahNews from './containers/pages/TambahNews';
 import ShowNews from './containers/pages/ShowNews';
+import ReviewPage from './containers/pages/ReviewPage';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Route path="/news" component={NewsPage}/>
         <Route path="/tambahberita" component = {TambahNews}/>
         <Route path="/shownews/:id" component = {ShowNews}/>
+        <Route path="/review" component={ReviewPage}/>
+
     </BrowserRouter>
   );
 }
