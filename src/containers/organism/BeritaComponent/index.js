@@ -11,7 +11,7 @@ const BeritaComponent = (props) => {
                 <td></td>
                 <td>
                     <Link to={"/shownews/"+data.id_berita} className="btn btn-info" >SHOW</Link>
-                    <Link className="btn btn-warning" >HAPUS</Link>
+                    <button className="btn btn-warning" onClick={() => props.hapus(data.id_berita)} >HAPUS</button>
                 </td>
             </tr>
         </tbody>
