@@ -11,6 +11,7 @@ import TambahNews from './containers/pages/TambahNews';
 import ShowNews from './containers/pages/ShowNews';
 import ReviewPage from './containers/pages/ReviewPage';
 import PengaduanPage from './containers/pages/PengaduanPage';
+import KomentarPage from './containers/pages/KomentarPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/shownews/:id" component = {ShowNews}/>
         <Route path="/review" component={ReviewPage}/>
         <Route path="/pengaduan" component={PengaduanPage}/>
+        <Route path="/komen" component={KomentarPage}/>
 
     </BrowserRouter>
   );
