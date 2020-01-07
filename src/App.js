@@ -1,12 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Login from './containers/pages/Login';
 
 function App() {
   return (
-   <div>
-     <p>Hello Word</p>
-   </div>
+    <BrowserRouter>
+        <Route path="/" exact component={Login} />
+    </BrowserRouter>
   );
 }
 
