@@ -10,7 +10,7 @@ const BeritaComponent = (props) => {
                 <td>{data.tanggal_berita}</td>
                 <td></td>
                 <td>
-                    <Link className="btn btn-info" >EDIT</Link>
+                    <Link to={"/shownews/"+data.id_berita} className="btn btn-info" >SHOW</Link>
                     <Link className="btn btn-warning" >HAPUS</Link>
                 </td>
             </tr>
