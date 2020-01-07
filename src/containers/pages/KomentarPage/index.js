@@ -14,7 +14,7 @@ class KomentarPage extends Component{
 
     getData = () => {
         Axios.get("http://localhost/api_pariwisata/komentar.php").then(res => {
-            console.log(res)
+            //console.log(res)
             this.setState({
                 komentar : res.data.data
             })
@@ -42,7 +42,7 @@ class KomentarPage extends Component{
             <div>
                 <Navbar/>
                 <div className="container">
-                     <h1>HALAMAN REVIEW</h1>
+                     <h1>HALAMAN KOMENTAR</h1>
                      <KomentarComponent data={this.state.komentar} hapus={this.removeHandler} />
                </div>
                

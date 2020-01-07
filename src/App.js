@@ -12,6 +12,7 @@ import ShowNews from './containers/pages/ShowNews';
 import ReviewPage from './containers/pages/ReviewPage';
 import PengaduanPage from './containers/pages/PengaduanPage';
 import KomentarPage from './containers/pages/KomentarPage';
+import KontakPage from './containers/pages/KontakPage';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/review" component={ReviewPage}/>
         <Route path="/pengaduan" component={PengaduanPage}/>
         <Route path="/komen" component={KomentarPage}/>
+        <Route path="/kontak" component={KontakPage}/>
 
     </BrowserRouter>
   );

@@ -11,7 +11,7 @@ const Navbar = () => {
                         <li><Link to="/wisata" >WISATA</Link></li>
                         <li><Link to="/news" >BERITA</Link></li>
                         <li><Link to="/review" >REVIEW</Link></li>
-                        <li><Link to="" >KONTAK</Link></li>
+                        <li><Link to="/kontak" >KONTAK</Link></li>
                         <li><Link to="/pengaduan" >PENGADUAN</Link></li>
                         <li><Link to="/komen" >KOMENTAR</Link></li>
                         <li><Link to="" >LOGOUT</Link></li>

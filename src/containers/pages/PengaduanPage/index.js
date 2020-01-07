@@ -13,7 +13,7 @@ class PengaduanPage extends Component{
 
     getData = () => {
         Axios.get("http://localhost/api_pariwisata/pengaduan.php").then(res => {
-            console.log(res)
+           // console.log(res)
             this.setState({
                 pengaduan : res.data.data
             })
@@ -41,7 +41,7 @@ class PengaduanPage extends Component{
             <div>
                 <Navbar/>
                 <div className="container">
-                     <h1>HALAMAN REVIEW</h1>
+                     <h1>HALAMAN PENGADUAN</h1>
                      <PengaduanComponent data={this.state.pengaduan} hapus={this.removeHandler} />
                 </div>
                
