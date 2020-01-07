@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Navbar from '../../organism/Navbar'
 import Axios from 'axios'
 import WisataComponent from '../../organism/WisataComponent'
+import { Link } from 'react-router-dom'
 
 class Wisata extends Component {
     constructor(props){
@@ -26,6 +27,7 @@ class Wisata extends Component {
         return (
             <div>
                 <Navbar />
+                <Link to="/tambahwisata" className="btn btn-info">TAMBAH WISATA</Link>
                 <WisataComponent data ={this.state.wisata} />
             </div>
 
