@@ -11,7 +11,7 @@ const WisataComponent = (props) => {
                 <td></td>
                 <td>
                     <Link className="btn btn-info" to={"/showWis/"+data.id_wisata} >SHOW</Link>
-                    <a className="btn btn-warning">DELETE</a>
+                    <button className="btn btn-warning" onClick={() => props.hapus(data.id_wisata)} >HAPUS</button>
                 </td>
             </tr>
         </tbody>

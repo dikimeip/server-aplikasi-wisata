@@ -12,12 +12,28 @@ class Wisata extends Component {
         }
     }
 
-    componentDidMount = () => {
+    getData = () => {
         Axios.get('http://localhost/api_pariwisata/wisata.php').then(res => {
             // console.log(res.data.data)
             this.setState({
                 wisata: res.data.data
             })
+        }).catch(err => {
+            console.log(err)
+        })
+    }
+
+    componentDidMount = () => {
+        this.getData()
+    }
+
+    removeHandler = (d) => {
+        Axios.delete("http://localhost/api_pariwisata/delete_wisata.php?id=" + d).then(res => {
+            if (res.data.value === 1) {
+                this.getData()
+            } else {
+                console.log('error')
+            }
         }).catch(err => {
             console.log(err)
         })
@@ -29,8 +45,8 @@ class Wisata extends Component {
                 <Navbar />
                 <div className="container">
                     <Link to="/tambahwisata" className="btn btn-info">TAMBAH WISATA</Link>
-                    <br/>
-                    <WisataComponent data={this.state.wisata} />
+                    <br />
+                    <WisataComponent data={this.state.wisata} hapus={this.removeHandler} />
                 </div>
             </div>
 
