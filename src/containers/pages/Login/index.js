@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
+import { Redirect } from 'react-router'
 
 class Login extends Component {
     constructor(props) {
         super(props)
         this.state = {
             uname: "",
-            pass: ""
+            pass: "",
+            isLogin : false
         }
     }
 
@@ -19,7 +21,14 @@ class Login extends Component {
     handlerSubmit = (event) => {
         event.preventDefault()
         Axios.post('http://localhost/api_pariwisata/login.php',this.state).then(res => {
-            console.log(res)
+            //console.log(res)
+            if (res.data.value === 1) {
+               this.setState({
+                   isLogin:true
+               })
+            } else {
+                console.log('gagal')
+            }
         }).catch(err => {
             console.log(err)
         })
@@ -28,6 +37,11 @@ class Login extends Component {
 
 
     render() {
+
+        if (this.state.isLogin) {
+            return( <Redirect to ="/home" /> )
+        }
+
         return (
             <div>
                 <div className="row">
