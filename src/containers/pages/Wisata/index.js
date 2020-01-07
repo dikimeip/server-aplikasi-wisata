@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Navbar from '../../organism/Navbar'
 import Axios from 'axios'
+import WisataComponent from '../../organism/WisataComponent'
 
 class Wisata extends Component {
     constructor(props){
@@ -12,7 +13,10 @@ class Wisata extends Component {
 
     componentDidMount = () => {
         Axios.get('http://localhost/api_pariwisata/wisata.php').then(res => {
-            console.log(res.data.data)
+           // console.log(res.data.data)
+            this.setState({
+                wisata:res.data.data
+            })
         }).catch(err => {
             console.log(err)
         })
@@ -22,7 +26,7 @@ class Wisata extends Component {
         return (
             <div>
                 <Navbar />
-                <h1>HALAMAN WISATA</h1>
+                <WisataComponent data ={this.state.wisata} />
             </div>
 
         )
