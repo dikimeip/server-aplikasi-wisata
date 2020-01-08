@@ -8,10 +8,10 @@ const WisataComponent = (props) => {
                 <td>{data.nama_wisata}</td>
                 <td>{data.tanggal_wisata}</td>
                 <td>{data.map_wisata}</td>
-    <td>{data.ket}</td>
+                <td>{data.ket}</td>
                 <td></td>
                 <td>
-                    <Link className="btn btn-info" to={"/showWis/"+data.id_wisata} >SHOW</Link>
+                    <Link className="btn btn-info" to={"/showWis/" + data.id_wisata} >SHOW</Link>
                     <button className="btn btn-warning" onClick={() => props.hapus(data.id_wisata)} >HAPUS</button>
                 </td>
             </tr>
