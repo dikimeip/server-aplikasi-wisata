@@ -12,6 +12,7 @@ class TambahWisata extends Component {
             akses : "",
             map : "",
             foto : "",
+            ket:"",
             file : {
                 fto:""
             }
@@ -81,6 +82,17 @@ class TambahWisata extends Component {
                                     <div className="form-group">
                                         <label>Masukan Maps Long Lang</label>
                                         <input className="form-control" type="text" name="map"  onChange={this.inputChange} />
+                                    </div>
+                                    <div className="form-group">
+                                        <label>Masukan Keterangan Wisata</label>
+                                        <select name="ket" className="form-control" onChange={this.inputChange}>
+                                            <option value="ALAM">WISATA ALAM</option>
+                                            <option value="BUATAN">WISATA BUATAN</option>
+                                            <option value="BUDAYA">WISATA BUDAYA</option>
+                                            <option value="KULINER">WISATA KULINER</option>
+                                            <option value="HOTEL">HOTEL</option>
+                                            <option value="KERAJINAN">KERAJINAN</option>
+                                        </select>
                                     </div>
                                     <div className="form-group">
                                         <label>Masukan foto</label>

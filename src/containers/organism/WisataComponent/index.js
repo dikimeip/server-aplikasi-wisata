@@ -8,6 +8,7 @@ const WisataComponent = (props) => {
                 <td>{data.nama_wisata}</td>
                 <td>{data.tanggal_wisata}</td>
                 <td>{data.map_wisata}</td>
+    <td>{data.ket}</td>
                 <td></td>
                 <td>
                     <Link className="btn btn-info" to={"/showWis/"+data.id_wisata} >SHOW</Link>
@@ -25,6 +26,7 @@ const WisataComponent = (props) => {
                     <th>NAMA WISATA</th>
                     <th>TANGGAL</th>
                     <th>MAPS</th>
+                    <th>KETERANGAN</th>
                     <th>FOTO</th>
                     <th>AKSI</th>
                 </tr>
